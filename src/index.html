@@ -11,11 +11,26 @@
   </head>
   <body>
     <section class="main">
-      <button id="show-popup-form" class="btn btn-main">Click me!</button>
+    
       <!-- Display success message below -->
+    
     </section>
-    <div class="popup">
-      <!-- Here goes your popup form HTML code -->
+    <div  id="popup" class="popup">
+      <div class="close">X</div>
+     <form>
+       <h1>Login</h1>
+         <br>
+       <input type="text" placeholder="E-mail" name="email">
+       <br>
+       <input type="password" placeholder="Password" name="password">
+       <br>
+      
+       <label class="checkbox"><input type="checkbox" name="agreement">I agree to terms & conditions</label>
+      
+       <br>
+       <input type="submit" value="SUBMIT" name="submit">
+    
+     </form>
     </div>
     <script src="js/index.js" charset="utf-8"></script>
   </body>
