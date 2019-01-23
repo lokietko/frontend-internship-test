@@ -2,7 +2,7 @@
 @import 'layout/main';
 
 $heightInput:15%;
-$widthInput:80%;
+$widthInput:100%;
 h1{
  display: inline-block;
 text-align: center;
@@ -32,6 +32,9 @@ background-color:black;
 border: none;
 color: white;
 }
+input[type="submit"]:hover{
+    background-color: pink;
+}
 input{
 margin:2%;
 width: $widthInput;
@@ -43,15 +46,15 @@ border:  1px solid black;
 input[name="agreement"]{
     height: 8%;
     width:8%;
-    display: inline-block;
-    margin-left: 0px;
+   padding: 0px;
+     display: inline-block;
+    margin-left: 4px;
     margin-right: 0px;
-    padding: 0px;
-    
+   
     
 
 }
-label.checbox{
+label{
     font-size: 1em; 
     width: $widthInput;
     height: $heightInput;
@@ -65,11 +68,19 @@ bottom: 0;
 left: 0;
 margin: auto;
 display: inline-block;
- height: 80%;
- width: 90%;
-text-align: center;    
+ 
 }
-
+.formContainer{
+    width: 80%;
+    height:90%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    text-align: left;
+}
 .close{
     width: 25px;
     height: 25px;
