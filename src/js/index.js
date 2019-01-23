@@ -5,9 +5,11 @@
 const submitButton=document.forms["form"]["submit"]
 const form=document.forms["form"];
 
-buttonClickMe.addEventListener("click",()=>{
-popupForm.style.display="inline-block";
-});
+ function dispalayInlineBlock(){
+   popupForm.style.display="inline-block"; 
+}
+
+buttonClickMe.addEventListener("click",dispalayInlineBlock);
  
 
 buttonClikClose.addEventListener("click",()=>{
@@ -15,18 +17,32 @@ popupForm.style.display="none";
 });
 
 
-submitButton.addEventListener("mouseover",function(){
+function handleValidation() {
 
- const email=document.forms["form"]["email"].value;
- const password=document.forms["form"]["password"].vaue;
- const checkbox=document.forms["form"]["agreement"].checked;
-    if (email !== "" && email.includes("@") && password !== ""&& checkbox){
-    submitButton.style.backgroundColor="pink";
+    const email = document.forms["form"]["email"].value;
+    const password = document.forms["form"]["password"].value;
+    const checkbox = document.forms["form"]["agreement"].checked;
+    if (email !== "" && email.includes("@") && password !== "" && checkbox) {
+     submitButton.style.backgroundColor = "pink";
+    }
+
 }
+submitButton.addEventListener("mouseover",handleValidation);
 
-})
+
  
-     
+     form.addEventListener("submit",(e)=>{
+        buttonClickMe.removeEventListener("click",dispalayInlineBlock);
+        e.preventDefault();
+       if (submitButton.style.backgroundColor==="pink") {
+
+        setTimeout(() => {
+        popupForm.style.display = "none";
+        buttonClickMe.innerText="Thank You"},3000);
+    } 
+         }
+         
+     );
   
 
 
