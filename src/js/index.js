@@ -15,7 +15,7 @@ popupForm.style.display="none";
 });
 
 
-form.addEventListener("change",function(){
+submitButton.addEventListener("mouseover",function(){
 
  const email=document.forms["form"]["email"].value;
  const password=document.forms["form"]["password"].vaue;
@@ -25,7 +25,6 @@ form.addEventListener("change",function(){
 }
 
 })
-
  
      
   
